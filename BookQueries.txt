@@ -1,0 +1,120 @@
+create table books(bookcode int,BookName varchar(50),category varchar(20),Author varchar(25),publication varchar(40),Edition varchar(40),price float,page varchar(10));
+
+
+insert into books values(1529092271,'Under the Whispering Door','romance','T.J. Klune','pan macmilliam',2021,478,384);
+
+insert into books values(1849162883,'The Girl with the Dragon Tattoo','mystery','Stieg Larsson','quercus publishing',2001,189,542);
+
+insert into books values(0001548645,'And Then There Were None ','mystery','Agatha Christie','Harper Collins publisher',2017,220,256);
+
+insert into books values(007428540,'A Game of Thrones',' fantasy',' George R.R. Martin','Harper Collins publisher',2001,302,864);
+
+insert into books values(0007273508,'The Lord of the Rings','fantasy','J.R.R. Tolkien','Harper Collins publisher',2007,592,1216);
+
+insert into books values(1841585536,'True Raiders:','Biography',' Brad Ricca ','birlin general',1990,1138,224);
+
+insert into books values(1614275076,'The Secret of Life','Biography','Howard Markel','martino fines books',1997,1207,210);
+
+insert into books values(184604713,'No Cure for Being Human','Autobiography',' Ebury publishing',' Random House',2005,524,224);
+
+insert into books values(1474867474,'Beauty & the beast','fiction','Elizabeth Rudnick','parragon publishing',2017,256,290);
+
+insert into books values(0062515674,'The monk who sold his ferrari','self help','Robin sharma','Jaico publishing house',1999,198,156);
+
+insert into books values(0446310789,'To kill a mocking bird','Regional book','Harper Lee','Cornerstone',1960,281,317);
+
+insert into books values(0143448334,'Wish I could tell you','romance','Durjay Datta','penguin random house',2019,288,133);
+
+insert into books values(1542094139,'One arranged murder','fiction','Chetan Bhagat','westland publication',2020,303,144);
+
+insert into books values(0008386597,'Think like a monk','Regional book','Jay Shetty','Harper Collins publisher',2020,320,299);
+
+insert into books values(8194790839,'The power of your subconscious mind','philosophy','Joseph Murphy','Srishti publishers & Distributions',2020,232,116);
+
+insert into books values(0143062226,'Wise and otherwise','Literary collections','Sudha murthy','penguin random house',2020,232,144);
+
+insert into books values(4550069960,'The Alchemist','fiction','Paulo Coelho','Harper Collins publisher',2018,208,168);
+
+insert into books values(0143028574,'God of small things','fiction','Arundhati Roy','penguin random house',1997,256,246);
+
+
+mysql> select * from books;
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+
+| bookcode   | BookName                            | category             | Author              | publication                        | Edition | price | page |
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+
+| 1529092271 | Under the Whispering Door           | romance              | T.J. Klune          | pan macmilliam                     | 2021    |   478 | 384  |
+| 1849162883 | The Girl with the Dragon Tattoo     | mystery              | Stieg Larsson       | quercus publishing                 | 2001    |   189 | 542  |
+|    1548645 | And Then There Were None            | mystery              | Agatha Christie     | Harper Collins publisher           | 2017    |   220 | 256  |
+|    7428540 | A Game of Thrones                   |  fantasy             |  George R.R. Martin | Harper Collins publisher           | 2001    |   302 | 864  |
+|    7273508 | The Lord of the Rings               | fantasy              | J.R.R. Tolkien      | Harper Collins publisher           | 2007    |   592 | 1216 |
+| 1841585536 | True Raiders:                       | Biography            |  Brad Ricca         | birlin general                     | 1990    |  1138 | 224  |
+| 1614275076 | The Secret of Life                  | Biography            | Howard Markel       | martino fines books                | 1997    |  1207 | 210  |
+|  184604713 | No Cure for Being Human             | Autobiography        |  Ebury publishing   |  Random House                      | 2005    |   524 | 224  |
+| 1474867474 | Beauty & the beast                  | fiction              | Elizabeth Rudnick   | parragon publishing                | 2017    |   256 | 290  |
+|   62515674 | The monk who sold his ferrari       | self help            | Robin sharma        | Jaico publishing house             | 1999    |   198 | 156  |
+|  446310789 | To kill a mocking bird              | Regional book        | Harper Lee          | Cornerstone                        | 1960    |   281 | 317  |
+|  143448334 | Wish I could tell you               | romance              | Durjay Datta        | penguin random house               | 2019    |   288 | 133  |
+| 1542094139 | One arranged murder                 | fiction              | Chetan Bhagat       | westland publication               | 2020    |   303 | 144  |
+|    8386597 | Think like a monk                   | Regional book        | Jay Shetty          | Harper Collins publisher           | 2020    |   320 | 299  |
+|  143062226 | Wise and otherwise                  | Literary collections | Sudha murthy        | penguin random house               | 2020    |   232 | 144  |
+|  143028574 | God of small things                 | fiction              | Arundhati Roy       | penguin random house               | 1997    |   256 | 246  |
+|  455069960 | The Alchemist                       | fiction              | Paulo Coelho        | Harper Collins publisher           | 2018    |   208 | 168  |
+|  819479839 | The power of your subconscious mind | philosophy           | Joseph Murphy       | Srishti publishers & Distributions | 2020    |   232 | 116  |
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+
+18 rows in set (0.00 sec)
+
+mysql> ALTER TABLE books ADD Review varchar(500);
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from books;
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+--------+
+| bookcode   | BookName                            | category             | Author              | publication                        | Edition | price | page | Review |
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+--------+
+| 1529092271 | Under the Whispering Door           | romance              | T.J. Klune          | pan macmilliam                     | 2021    |   750 | 384  | NULL   |
+| 1849162883 | The Girl with the Dragon Tattoo     | mystery              | Stieg Larsson       | quercus publishing                 | 2001    |   750 | 542  | NULL   |
+|    1548645 | And Then There Were None            | mystery              | Agatha Christie     | Harper Collins publisher           | 2017    |   750 | 256  | NULL   |
+|    7428540 | A Game of Thrones                   |  fantasy             |  George R.R. Martin | Harper Collins publisher           | 2001    |   750 | 864  | NULL   |
+|    7273508 | The Lord of the Rings               | fantasy              | J.R.R. Tolkien      | Harper Collins publisher           | 2007    |   750 | 1216 | NULL   |
+| 1841585536 | True Raiders:                       | Biography            |  Brad Ricca         | birlin general                     | 1990    |   750 | 224  | NULL   |
+| 1614275076 | The Secret of Life                  | Biography            | Howard Markel       | martino fines books                | 1997    |   750 | 210  | NULL   |
+|  184604713 | No Cure for Being Human             | Autobiography        |  Ebury publishing   |  Random House                      | 2005    |   750 | 224  | NULL   |
+| 1474867474 | Beauty & the beast                  | fiction              | Elizabeth Rudnick   | parragon publishing                | 2017    |   750 | 290  | NULL   |
+|   62515674 | The monk who sold his ferrari       | self help            | Robin sharma        | Jaico publishing house             | 1999    |   750 | 156  | NULL   |
+|  446310789 | To kill a mocking bird              | Regional book        | Harper Lee          | Cornerstone                        | 1960    |   750 | 317  | NULL   |
+|  143448334 | Wish I could tell you               | romance              | Durjay Datta        | penguin random house               | 2019    |   750 | 133  | NULL   |
+| 1542094139 | One arranged murder                 | fiction              | Chetan Bhagat       | westland publication               | 2020    |   750 | 144  | NULL   |
+|    8386597 | Think like a monk                   | Regional book        | Jay Shetty          | Harper Collins publisher           | 2020    |   750 | 299  | NULL   |
+|  143062226 | Wise and otherwise                  | Literary collections | Sudha murthy        | penguin random house               | 2020    |   750 | 144  | NULL   |
+|  143028574 | God of small things                 | fiction              | Arundhati Roy       | penguin random house               | 1997    |   750 | 246  | NULL   |
+|  455069960 | The Alchemist                       | fiction              | Paulo Coelho        | Harper Collins publisher           | 2018    |   750 | 168  | NULL   |
+|  819479839 | The power of your subconscious mind | philosophy           | Joseph Murphy       | Srishti publishers & Distributions | 2020    |   750 | 116  | NULL   |
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+--------+
+18 rows in set (0.00 sec)
+
+mysql> select * from books;
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+--------------------+
+| bookcode   | BookName                            | category             | Author              | publication                        | Edition | price | page | Review             |
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+--------------------+
+| 1529092271 | Under the Whispering Door           | romance              | T.J. Klune          | pan macmilliam                     | 2021    |   750 | 384  | NULL               |
+| 1849162883 | The Girl with the Dragon Tattoo     | mystery              | Stieg Larsson       | quercus publishing                 | 2001    |   750 | 542  | NULL               |
+|    1548645 | And Then There Were None            | mystery              | Agatha Christie     | Harper Collins publisher           | 2017    |   750 | 256  | NULL               |
+|    7428540 | A Game of Thrones                   |  fantasy             |  George R.R. Martin | Harper Collins publisher           | 2001    |   750 | 864  | NULL               |
+|    7273508 | The Lord of the Rings               | fantasy              | J.R.R. Tolkien      | Harper Collins publisher           | 2007    |   750 | 1216 | NULL               |
+| 1841585536 | True Raiders:                       | Biography            |  Brad Ricca         | birlin general                     | 1990    |   750 | 224  | NULL               |
+| 1614275076 | The Secret of Life                  | Biography            | Howard Markel       | martino fines books                | 1997    |   750 | 210  | NULL               |
+|  184604713 | No Cure for Being Human             | Autobiography        |  Ebury publishing   |  Random House                      | 2005    |   750 | 224  | NULL               |
+| 1474867474 | Beauty & the beast                  | fiction              | Elizabeth Rudnick   | parragon publishing                | 2017    |   750 | 290  | NULL               |
+|   62515674 | The monk who sold his ferrari       | self help            | Robin sharma        | Jaico publishing house             | 1999    |   750 | 156  | NULL               |
+|  446310789 | To kill a mocking bird              | Regional book        | Harper Lee          | Cornerstone                        | 1960    |   750 | 317  | NULL               |
+|  143448334 | Wish I could tell you               | romance              | Durjay Datta        | penguin random house               | 2019    |   750 | 133  | NULL               |
+| 1542094139 | One arranged murder                 | fiction              | Chetan Bhagat       | westland publication               | 2020    |   750 | 144  | NULL               |
+|    8386597 | Think like a monk                   | Regional book        | Jay Shetty          | Harper Collins publisher           | 2020    |   750 | 299  | NULL               |
+|  143062226 | Wise and otherwise                  | Literary collections | Sudha murthy        | penguin random house               | 2020    |   750 | 144  | NULL               |
+|  143028574 | God of small things                 | fiction              | Arundhati Roy       | penguin random house               | 1997    |   750 | 246  | beautiful story... |
+|  455069960 | The Alchemist                       | fiction              | Paulo Coelho        | Harper Collins publisher           | 2018    |   750 | 168  | NULL               |
+|  819479839 | The power of your subconscious mind | philosophy           | Joseph Murphy       | Srishti publishers & Distributions | 2020    |   750 | 116  | NULL               |
++------------+-------------------------------------+----------------------+---------------------+------------------------------------+---------+-------+------+--------------------+
+18 rows in set (0.00 sec)
+
+
